@@ -1,0 +1,7 @@
+[tool.ruff]
+line-length = 160
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"    # ← was "indent-width", correct field is "indent-style"
+line-ending = "auto"
