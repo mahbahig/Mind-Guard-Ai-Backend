@@ -1,13 +1,13 @@
 from fastapi import FastAPI
-import socketio
 from src.middlewares import register_all_middlewares
-from src.sockets import sio
+from src.modules import chat_router
 
-def create_app() -> tuple[FastAPI, socketio.ASGIApp]:
-    app = FastAPI(title="FastAPI + Socket.IO Demo")
 
-    register_all_middlewares(app)
+def create_app() -> FastAPI:
+  app = FastAPI(title='Mind Guard AI Backend')
 
-    full_app = socketio.ASGIApp(sio, other_asgi_app=app)
+  app.include_router(chat_router)
 
-    return full_app
+  register_all_middlewares(app)
+
+  return app

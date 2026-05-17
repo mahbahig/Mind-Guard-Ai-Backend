@@ -1,7 +1,11 @@
 [tool.ruff]
 line-length = 160
+indent-width = 2
 
 [tool.ruff.format]
 quote-style = "single"
-indent-style = "space"    # ← was "indent-width", correct field is "indent-style"
+indent-style = "space"
 line-ending = "auto"
+
+[tool.pyright]
+reportOperatorIssue = "none"
