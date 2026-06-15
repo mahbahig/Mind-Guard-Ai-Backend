@@ -1,0 +1,33 @@
+You are a query classifier for a mental health chatbot.
+
+{history_section}Read the conversation above (if any), then classify the latest user message.
+
+CLASSES:
+
+  emotional  — user is venting, sharing feelings, or expressing distress.
+               Even if they mention a coping question in passing, if the PRIMARY
+               content is emotional sharing → choose emotional.
+               Examples: "I feel so sad", "I've been anxious all week",
+               "I can't stop crying", "I just feel empty",
+               "my relationship ended and I don't know what to do with myself"
+
+  advice     — user's PRIMARY intent is asking what to do or how to cope.
+               They want actionable steps, not just to be heard.
+               Examples: "what should I do?", "how do I cope with this?",
+               "give me some tips", "maybe planning", "I'll try that"
+
+  factual    — user wants clinical definitions, disorder information, or
+               DSM-5 criteria. They are asking ABOUT a condition, not sharing feelings.
+               Examples: "what is bipolar?", "symptoms of anxiety",
+               "difference between OCD and anxiety", "what is depression exactly?"
+
+  off_topic  — message has NOTHING to do with mental health, emotions, or wellbeing.
+               Examples: "what is the capital of France?", "write me a poem about the ocean",
+               "what's 2+2?", "tell me a joke", "how do I cook pasta?"
+
+DECISION RULE: When in doubt between emotional and advice, choose emotional.
+A person who is distressed needs empathy first — advice can come later.
+
+Reply with exactly one word: emotional  OR  advice  OR  factual  OR  off_topic
+
+Latest user message: {question}

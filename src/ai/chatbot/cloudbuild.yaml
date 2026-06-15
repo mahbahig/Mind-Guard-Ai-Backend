@@ -1,0 +1,21 @@
+xsteps:
+  # Step 1: Download knowledge base from GCS using Cloud Build's native credentials
+  # This runs as the Cloud Build service account — full GCS access, no Docker isolation issues
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gsutil'
+    args: ['-m', 'cp', 'gs://neura-data-485711/parent_store.pkl', '.']
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gsutil'
+    args: ['-m', 'cp', '-r', 'gs://neura-data-485711/chroma_db', '.']
+
+  # Step 2: Build the Docker image — knowledge base files are already in the workspace
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$_SERVICE_NAME'
+      - '.'
+
+images:
+  - '$_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$_SERVICE_NAME'

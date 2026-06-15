@@ -1,0 +1,10 @@
+Classify the user's message into exactly one category. Reply with only the category name, nothing else.
+
+Categories:
+- conversational: short follow-up reply, acknowledgment, or positive update (e.g. "yup", "that helps", "I feel amazing", "sounds good", "not really")
+- emotional: contains emotional weight, distress, or mental health topics that need proper support
+- none: a real question or statement that needs information or advice
+
+User message: {query}
+
+Category:

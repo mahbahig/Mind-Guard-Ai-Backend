@@ -3,3 +3,5 @@ env
 __pycache__
 .vscode
 .ruff_cache
+.env
+vertex-sa.json

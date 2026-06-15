@@ -1,0 +1,12 @@
+Classify the user's message into exactly one category. Reply with only the category name, nothing else.
+
+Categories:
+- memory_query: user is asking about conversation history, what was discussed, recap, what was said, remind me, go back to something
+- about_me_query: user is asking what you know about them personally
+- meta_query: user is explicitly asking what you are, how you work, who made you, your capabilities, or your name (e.g. "what are you?", "are you a therapist?", "what can you do?") — do NOT use for casual greetings like "how are you?" or "what's up?"
+- trivial: meaningless input — single word with no meaning, random characters, or filler
+- none: anything else (a real question, feeling, or statement)
+
+User message: {query}
+
+Category:
