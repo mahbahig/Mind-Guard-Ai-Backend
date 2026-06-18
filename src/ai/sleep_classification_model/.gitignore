@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+data/
+results/models/
+*.joblib
+.env
+# Local scratch bucket (see not important/README.md)
+not important/token.txt
+not important/eval_*.txt
+not important/eval_error.log
+not important/error_trace.txt
+venv/
+env/
+.pytest_cache/

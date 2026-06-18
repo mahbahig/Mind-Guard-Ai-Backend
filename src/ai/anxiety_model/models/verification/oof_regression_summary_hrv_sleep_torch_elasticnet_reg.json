@@ -1,0 +1,7 @@
+{
+  "tag": "hrv_sleep_torch_elasticnet_reg",
+  "n_samples": 134,
+  "mae_oof": 6.215971143748297,
+  "rmse_oof": 25.76598437102715,
+  "spearman_rho_oof": -0.09458005843912963
+}

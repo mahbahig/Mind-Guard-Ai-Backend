@@ -1,0 +1,13 @@
+## Per-Class Evaluation Metrics
+
+| Stage | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------| 
+| Wake  | 0.417     | 0.330   | 0.368    |    1708 |
+| N1    | 0.075     | 0.011   | 0.019    |     555 |
+| N2    | 0.520     | 0.806   | 0.632    |    3083 |
+| N3    | 0.000     | 0.000   | 0.000    |     438 |
+| REM   | 0.028     | 0.007   | 0.011    |     569 |
+
+**Global Accuracy** : 0.4815
+**Cohen's Kappa (k)**: 0.0978
+**Balanced Accuracy**: 0.2308

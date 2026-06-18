@@ -1,0 +1,8 @@
+numpy
+pandas
+scipy
+scikit-learn
+neurokit2
+fastapi
+uvicorn
+requests

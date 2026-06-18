@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "inference_use_variant": "hrv_sleep",
+  "primary_regressor": "elasticnet_regression",
+  "primary_classifier": "elasticnet_binary",
+  "feature_names_hrv_only": [
+    "demo_regular",
+    "gyr_y_avg_mean",
+    "rmssd_min",
+    "rmssd_slope",
+    "demo_age",
+    "pnn50_mean",
+    "acc_y_avg_std",
+    "HR_median",
+    "gyr_z_avg_mean",
+    "rmssd_day_mean",
+    "gyr_x_avg_std",
+    "gyr_y_avg_std",
+    "pnn50_cv",
+    "steps_count",
+    "grv_y_avg_mean",
+    "pnn50_slope",
+    "ibi_day_std",
+    "grv_w_avg_std",
+    "HR_night_std",
+    "gyr_x_avg_mean",
+    "acc_z_avg_std",
+    "grv_z_avg_std"
+  ],
+  "feature_names_hrv_sleep": [
+    "demo_regular",
+    "sleep_sleep_duration_std",
+    "ibi_day_std",
+    "sleep_sleep_latency_mean",
+    "pnn50_cv",
+    "pnn50_mean",
+    "gyr_z_avg_std",
+    "grv_w_avg_std",
+    "gyr_y_avg_mean",
+    "acc_z_avg_std",
+    "gyr_x_avg_mean",
+    "gyr_x_avg_std",
+    "acc_y_avg_std",
+    "rmssd_slope",
+    "ibi_iqr",
+    "ibi_night_mean",
+    "demo_age",
+    "gyr_z_avg_mean",
+    "grv_x_avg_std",
+    "HR_night_std",
+    "grv_y_avg_std",
+    "sdnn_mean"
+  ],
+  "binary_cutoff": 5.0,
+  "linear_backend": "sklearn",
+  "granularity": "wave",
+  "binary_screening_hrv_only": {
+    "ensemble_weight_enet": 0.15000000000000002,
+    "ensemble_regression_weight_enet": 0.5,
+    "platt_coef": [
+      1.7392420293849442
+    ],
+    "platt_intercept": -0.514868127371442,
+    "screening_prob_threshold": 0.4742749819772618,
+    "youden_j": 0.34470588235294114
+  },
+  "binary_screening_hrv_sleep": {
+    "ensemble_weight_enet": 0.0,
+    "ensemble_regression_weight_enet": 1.0,
+    "platt_coef": [
+      2.2750806215401163
+    ],
+    "platt_intercept": -0.7188553920400428,
+    "screening_prob_threshold": 0.5110414832263136,
+    "youden_j": 0.4170588235294118
+  },
+  "screening_prob_threshold": 0.5110414832263136
+}

@@ -1,0 +1,7 @@
+{
+  "tag": "hrv_only_torch_rf_reg",
+  "n_samples": 134,
+  "mae_oof": 2.425469863350428,
+  "rmse_oof": 3.0557519159324635,
+  "spearman_rho_oof": 0.2646648633992972
+}

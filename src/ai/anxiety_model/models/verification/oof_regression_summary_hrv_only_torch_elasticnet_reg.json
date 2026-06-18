@@ -1,0 +1,7 @@
+{
+  "tag": "hrv_only_torch_elasticnet_reg",
+  "n_samples": 134,
+  "mae_oof": 3.596249246660018,
+  "rmse_oof": 4.8509767973083315,
+  "spearman_rho_oof": 0.01671888998157187
+}

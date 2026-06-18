@@ -1,0 +1,7 @@
+{
+  "tag": "hrv_only_sklearn_ensemble_reg",
+  "n_samples": 134,
+  "mae_oof": 2.3112670437688774,
+  "rmse_oof": 3.028379113229645,
+  "spearman_rho_oof": 0.35411474189887593
+}
